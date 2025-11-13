@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&display=swap");
+@import "tailwindcss";
+
+* {
+  font-family: "Outfit", "sans-serif";
+}
+html {
+  scroll-behavior: smooth;
+}
+
+@theme {
+  --color-primary: #5044e5;
+}
+
+.reset-tw,
+.reset-tw * {
+  all: revert !important;
+}
+
+.cl-drawerRoot {
+  z-index: 10;
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    border-color: transparent;
+  }
+  50% {
+    border-color: black;
+  }
+}
+
+.typing {
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid rgb(204, 55, 55);
+  animation: typing 3s steps(30, end) infinite alternate,
+    blink 0.75s step-end infinite;
+}
