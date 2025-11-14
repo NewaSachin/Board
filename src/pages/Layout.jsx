@@ -12,17 +12,17 @@ function Layout() {
           todo: {
             name: "To Do",
             items: [
-              //   { id: "1", content: "Market Research" },
-              //   { id: "2", content: "Write Project" },
+                { id: "1", content: "Market Research" },
+                { id: "2", content: "Write Project" },
             ],
           },
           inProgress: {
             name: "In Progress",
-            // items: [{ id: "3", content: "Design UI mockups" }],
+            items: [{ id: "3", content: "Design UI mockups" }],
           },
           done: {
             name: "Done",
-            // items: [{ id: "4", content: "Setup Repository" }],
+            items: [{ id: "4", content: "Setup Repository" }],
           },
         };
   });
@@ -30,7 +30,7 @@ function Layout() {
   const [newTask, setNewTask] = useState("");
   const [activeColumn, setActiveColumn] = useState("todo");
   const [editingTask, setEditingTask] = useState(null);
-  const [editedContent, setEditedContent] = useState("");
+  const [editedContent, setEditedContent] = useState("null");
 
   useEffect(() => {
     localStorage.setItem("kanbanColumns", JSON.stringify(columns));
